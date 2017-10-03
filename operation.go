@@ -211,7 +211,8 @@ func (operation *Operation) ParseResponseComment(commentLine string) error {
 			if typeSpec, ok := operation.parser.TypeDefinitions[pkgName][typeName]; ok {
 				operation.parser.registerTypes[refType] = typeSpec
 			} else {
-				return fmt.Errorf("Can not find ref type:\"%s\".", refType)
+				operation.parser.registerTypes[refType] = nil
+				//return fmt.Errorf("Can not find ref type:\"%s\".", refType)
 			}
 
 		}

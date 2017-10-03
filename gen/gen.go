@@ -8,7 +8,7 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/swaggo/swag"
+	"github.com/pilere/swag"
 )
 
 // Gen presents a generate tool for swag.
